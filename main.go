@@ -12,15 +12,15 @@ const (
 
 func main() {
 
-	_ := telegram.New(tgBotHost, mustTokern())
+	_tgClient := telegram.New(tgBotHost, mustToken())
 
 }
 
-func mustTokern() string {
+func mustToken() string {
 	token := flag.String(
-		"tg-bot-tokern",
+		"tg-bot-token",
 		"",
-		"telegram access token",
+		"token for access to telegram bot",
 	)
 	flag.Parse()
 
